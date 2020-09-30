@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+		
+		<span class="output">
+		<ul></ul>
+		<p></p>
+		</span>
+		
+		
+  </body>
+
+    <script>
+    	const list = document.querySelector('.output ul');
+			const totalBox = document.querySelector('.output p');
+    	//const btn = document.getElementsByClassName('button');
+    	//btn.onclick = createList();
+    	function createList(){
+    	console.log('createList');
+    		
+let total = 0;
+list.innerHTML = '';
+totalBox.textContent = '';
+// number 1
+                'Underpants:6.99'
+                'Socks:5.99'
+                'T-shirt:14.99'
+                'Trousers:31.99'
+                'Shoes:23.99';
+let products =['Underpants:6.99','Socks:5.99','T-shirt:14.99','Trousers:31.99','Shoes:23.99'];
+for (let i = 0; i < products.length; i++) { // number 2
+  // number 3
+  console.log(products[i].split(':')[0]);
+  console.log(products[i].split(':')[1]);
+let productNames = products[i].split(':')[0];
+
+let productPriceStr = products[i].split(':')[1];
+
+  // number 4
+let productPrice = Number(productPriceStr);
+  // number 5
+  let itemText = 0;
+total += productPrice;
+  itemText = productNames + ' = '+ productPriceStr ;
+  const listItem = document.createElement('li');
+  listItem.textContent = itemText;
+  list.appendChild(listItem);
+}
+
+totalBox.textContent = 'Total: $' + total.toFixed(2);
+    	
+    	}
+
+
+    </script>
+</html>
